@@ -4,30 +4,17 @@
  * @return {number}
  */
 var searchInsert = function(nums, target) {
+
+    let index = 0;
     let output = 0;
-     nums.forEach((value, index)=> {
-       // check if value === target
-            // return index
-        if(value === target){
-            console.log(index)
-            output = index;
-            return output;
-            
+    while(index < nums.length){
+        if(target <= nums[index]){
+            return index;
         }else {
-           if(value < target && index !== nums.length -1 && target < nums[index+ 1]){
-               output = index + 1;
-               return output;
-           } 
-            
-        if(value < target && index === nums.length -1){
-               console.log(output);
-               output = nums.length;
-            return output;
-           }
+            index ++;
         }
-    });
-            return output;
-    
+    }
+    return nums.length;
 };
 
 
@@ -53,4 +40,30 @@ check if currentIndex is the Last of the elementsIndex
     undefined < 8
     
     
+*/
+
+/*
+    let output = 0;
+     nums.forEach((value, index)=> {
+       // check if value === target
+            // return index
+        if(value === target){
+            console.log(index)
+            output = index;
+            return output;
+            
+        }else {
+           if(value < target && index !== nums.length -1 && target < nums[index+ 1]){
+               output = index + 1;
+               return output;
+           } 
+            
+        if(value < target && index === nums.length -1){
+               console.log(output);
+               output = nums.length;
+            return output;
+           }
+        }
+    });
+            return output;
 */
