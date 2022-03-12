@@ -13,20 +13,24 @@ for(let word of words){
     
     let hashEntries = Object.entries(hash);
     hashEntries.sort((a,b)=> {
-        if(a[1] == b[1]){
-            console.log(a[0], b[0]);
-            // return 1;
-          return  a[0] > b[0] ?  1 :  -1;
-        }else {
-            return b[1] - a[1];
-        }
+        // if(a[1] == b[1]){
+        //     // if frequency is same
+        //     //  order by chararcter
+        //     // console.log(a[0], b[0]);
+        //   return  a[0] > b[0] ?  1 :  -1;
+        // }else {
+        //      // order by frequency
+        //     return b[1] - a[1];
+        // }
+        
+        
+        return a[1] != b[1] ? b[1]- a[1] :  a[0] > b[0] ?  1 :  -1;
 
     });
     
-    // order by frequency
+   
     
-    // if frequency is same
-       //     order by chararcter
+    
     
     
     
