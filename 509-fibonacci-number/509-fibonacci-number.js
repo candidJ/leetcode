@@ -13,3 +13,7 @@ var fib = function(n) {
     
     return fib(n-1) + fib(n-2)
 };
+
+
+// solve with dynamic programming
+// time complexity and space complexity for recrusive way
