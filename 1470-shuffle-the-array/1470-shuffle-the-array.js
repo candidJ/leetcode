@@ -16,12 +16,12 @@ var shuffle = function(nums, n) {
     
     for(let i = 0 ; i < higher.length; i++){
         
-//         if(!lower[i]){
-//             result.push(...higher.slice(i, higher.length));
-//         }
-//          if(!higher[i]){
-//             result.push(...lower.slice(i, higher.length));
-//         }
+        if(!lower[i]){
+            result.push(...higher.slice(i, higher.length));
+        }
+         if(!higher[i]){
+            result.push(...lower.slice(i, higher.length));
+        }
         result.push(lower[i], higher[i]);
     }
     
